@@ -1,14 +1,12 @@
 const palindromes = function (string) {
   let bool = true;
-  let firstCharCompared = (string = string.replace(/[^a-zA-Z0-9]/g, ""));
+  let firstCharCompared = (string = string
+    .replace(/[^a-zA-Z0-9]/g, "")
+    .toLowerCase());
 
-  let secondCharCompared = (string = string.replace(/[^a-zA-Z0-9]/g, ""));
-
-  string = string.replace("!" || "," || "." || "?", "");
-  string = string.toLowerCase();
-
-  console.log(firstCharCompared);
-  console.log(secondCharCompared);
+  let secondCharCompared = (string = string
+    .replace(/[^a-zA-Z0-9]/g, "")
+    .toLowerCase());
 
   for (i = 0; i < string.length; i++) {
     firstCharCompared = string.charAt(i);
